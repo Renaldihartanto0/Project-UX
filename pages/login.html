@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - SlateMarket</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-100">
+
+    <!-- HEADER -->
+    <header class="border-b bg-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+
+            <a href="../index.html"
+                class="text-2xl font-extrabold tracking-tight text-slate-900">
+                Slate<span class="text-slate-500">Market</span>
+            </a>
+
+            <a href="../index.html"
+                class="text-sm font-semibold text-slate-600 hover:text-slate-900">
+                ← Kembali ke Beranda
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="flex min-h-[85vh] items-center justify-center px-4 py-10">
+
+        <div class="w-full max-w-md rounded-3xl border bg-white p-6 shadow-sm sm:p-8">
+
+            <!-- TITLE -->
+            <div class="mb-6 text-center">
+
+                <h1 id="form-title"
+                    class="text-3xl font-extrabold text-slate-900">
+                    Selamat Datang
+                </h1>
+
+                <p id="form-subtitle"
+                    class="mt-2 text-sm text-slate-500">
+                    Masuk ke akun SlateMarket kamu
+                </p>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+            <div id="message"
+                class="mb-4 hidden rounded-xl p-3 text-sm">
+            </div>
+
+
+            <!-- LOGIN FORM -->
+            <form id="login-form" class="space-y-4">
+
+                <div>
+                    <label for="login-email"
+                        class="mb-1 block text-sm font-semibold text-slate-700">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="login-email"
+                        required
+                        placeholder="nama@email.com"
+                        class="w-full rounded-xl border px-4 py-3 outline-none transition focus:border-slate-500"
+                    >
+                </div>
+
+
+                <div>
+                    <label for="login-password"
+                        class="mb-1 block text-sm font-semibold text-slate-700">
+                        Password
+                    </label>
+
+                    <div class="relative">
+
+                        <input
+                            type="password"
+                            id="login-password"
+                            required
+                            placeholder="Masukkan password"
+                            class="w-full rounded-xl border px-4 py-3 pr-20 outline-none transition focus:border-slate-500"
+                        >
+
+                        <button
+                            type="button"
+                            data-toggle="login-password"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-500 hover:text-slate-900"
+                        >
+                            Lihat
+                        </button>
+
+                    </div>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="w-full rounded-xl bg-slate-900 py-3 font-bold text-white transition hover:bg-slate-700"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <!-- REGISTER FORM -->
+            <form id="register-form" class="hidden space-y-4">
+
+                <div>
+                    <label for="register-name"
+                        class="mb-1 block text-sm font-semibold text-slate-700">
+                        Nama Lengkap
+                    </label>
+
+                    <input
+                        type="text"
+                        id="register-name"
+                        required
+                        minlength="2"
+                        placeholder="Nama kamu"
+                        class="w-full rounded-xl border px-4 py-3 outline-none transition focus:border-slate-500"
+                    >
+                </div>
+
+
+                <div>
+                    <label for="register-email"
+                        class="mb-1 block text-sm font-semibold text-slate-700">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="register-email"
+                        required
+                        placeholder="nama@email.com"
+                        class="w-full rounded-xl border px-4 py-3 outline-none transition focus:border-slate-500"
+                    >
+                </div>
+
+
+                <div>
+                    <label for="register-password"
+                        class="mb-1 block text-sm font-semibold text-slate-700">
+                        Password
+                    </label>
+
+                    <div class="relative">
+
+                        <input
+                            type="password"
+                            id="register-password"
+                            required
+                            minlength="6"
+                            placeholder="Minimal 6 karakter"
+                            class="w-full rounded-xl border px-4 py-3 pr-20 outline-none transition focus:border-slate-500"
+                        >
+
+                        <button
+                            type="button"
+                            data-toggle="register-password"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-500 hover:text-slate-900"
+                        >
+                            Lihat
+                        </button>
+
+                    </div>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="w-full rounded-xl bg-slate-900 py-3 font-bold text-white transition hover:bg-slate-700"
+                >
+                    Buat Akun
+                </button>
+
+            </form>
+
+
+            <!-- SWITCH FORM -->
+            <div class="mt-6 text-center text-sm text-slate-500">
+
+                <span id="switch-text">
+                    Belum punya akun?
+                </span>
+
+                <button
+                    id="switch-button"
+                    type="button"
+                    class="font-bold text-slate-900 hover:underline"
+                >
+                    Daftar sekarang
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/pages/login.js"></script>
+
+</body>
+
+</html>

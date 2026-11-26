@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | SlateMarket</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- HEADER -->
+    <header class="border-b border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+
+            <a href="../index.html" class="text-2xl font-bold text-slate-900">
+                Slate<span class="text-slate-500">Market</span>
+            </a>
+
+            <a
+                href="cart.html"
+                class="text-sm font-medium text-slate-600 hover:text-slate-900"
+            >
+                ← Kembali ke Keranjang
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="mx-auto min-h-screen max-w-7xl px-4 py-8">
+
+        <!-- BREADCRUMB -->
+        <nav class="mb-6 text-sm text-slate-500">
+
+            <a href="../index.html" class="hover:text-slate-900">
+                Beranda
+            </a>
+
+            <span class="mx-2">/</span>
+
+            <a href="cart.html" class="hover:text-slate-900">
+                Keranjang
+            </a>
+
+            <span class="mx-2">/</span>
+
+            <span class="font-medium text-slate-900">
+                Checkout
+            </span>
+
+        </nav>
+
+
+        <!-- TITLE -->
+        <div class="mb-8">
+
+            <h1 class="text-3xl font-bold text-slate-900">
+                Checkout
+            </h1>
+
+            <p class="mt-2 text-slate-500">
+                Lengkapi informasi pengiriman dan pembayaran.
+            </p>
+
+        </div>
+
+
+        <!-- CHECKOUT CONTENT -->
+        <form id="checkoutForm">
+
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+
+
+                <!-- LEFT CONTENT -->
+                <div class="space-y-6 lg:col-span-2">
+
+
+                    <!-- SHIPPING ADDRESS -->
+                    <section class="rounded-xl border border-slate-200 bg-white p-6">
+
+                        <h2 class="mb-5 text-lg font-bold text-slate-900">
+                            Alamat Pengiriman
+                        </h2>
+
+
+                        <div class="space-y-4">
+
+                            <!-- Name -->
+                            <div>
+
+                                <label
+                                    for="customerName"
+                                    class="mb-2 block text-sm font-medium"
+                                >
+                                    Nama Penerima
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customerName"
+                                    name="customerName"
+                                    placeholder="Masukkan nama penerima"
+                                    required
+                                    class="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
+                                >
+
+                            </div>
+
+
+                            <!-- Phone -->
+                            <div>
+
+                                <label
+                                    for="customerPhone"
+                                    class="mb-2 block text-sm font-medium"
+                                >
+                                    Nomor Telepon
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="customerPhone"
+                                    name="customerPhone"
+                                    placeholder="Contoh: 081234567890"
+                                    required
+                                    class="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
+                                >
+
+                            </div>
+
+
+                            <!-- Address -->
+                            <div>
+
+                                <label
+                                    for="customerAddress"
+                                    class="mb-2 block text-sm font-medium"
+                                >
+                                    Alamat Lengkap
+                                </label>
+
+                                <textarea
+                                    id="customerAddress"
+                                    name="customerAddress"
+                                    rows="4"
+                                    placeholder="Nama jalan, nomor rumah, RT/RW, kelurahan, dan kecamatan"
+                                    required
+                                    class="w-full resize-none rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- Notes -->
+                            <div>
+
+                                <label
+                                    for="customerNotes"
+                                    class="mb-2 block text-sm font-medium"
+                                >
+                                    Catatan untuk Penjual
+                                    <span class="font-normal text-slate-400">
+                                        (Opsional)
+                                    </span>
+                                </label>
+
+                                <textarea
+                                    id="customerNotes"
+                                    name="customerNotes"
+                                    rows="2"
+                                    placeholder="Contoh: Tolong bungkus dengan aman."
+                                    class="w-full resize-none rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- PAYMENT METHOD -->
+                    <section class="rounded-xl border border-slate-200 bg-white p-6">
+
+                        <h2 class="mb-5 text-lg font-bold text-slate-900">
+                            Metode Pembayaran
+                        </h2>
+
+
+                        <div class="space-y-3">
+
+
+                            <!-- Transfer -->
+                            <label class="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 p-4 transition hover:border-slate-400">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="Transfer Bank"
+                                    required
+                                    class="h-4 w-4 accent-slate-900"
+                                >
+
+                                <div>
+
+                                    <p class="font-medium text-slate-900">
+                                        Transfer Bank
+                                    </p>
+
+                                    <p class="text-sm text-slate-500">
+                                        Pembayaran melalui transfer bank.
+                                    </p>
+
+                                </div>
+
+                            </label>
+
+
+                            <!-- E-Wallet -->
+                            <label class="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 p-4 transition hover:border-slate-400">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="E-Wallet"
+                                    class="h-4 w-4 accent-slate-900"
+                                >
+
+                                <div>
+
+                                    <p class="font-medium text-slate-900">
+                                        E-Wallet
+                                    </p>
+
+                                    <p class="text-sm text-slate-500">
+                                        Pembayaran melalui dompet digital.
+                                    </p>
+
+                                </div>
+
+                            </label>
+
+
+                            <!-- COD -->
+                            <label class="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 p-4 transition hover:border-slate-400">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="COD"
+                                    class="h-4 w-4 accent-slate-900"
+                                >
+
+                                <div>
+
+                                    <p class="font-medium text-slate-900">
+                                        Cash on Delivery (COD)
+                                    </p>
+
+                                    <p class="text-sm text-slate-500">
+                                        Bayar ketika pesanan diterima.
+                                    </p>
+
+                                </div>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+
+
+                <!-- RIGHT CONTENT -->
+                <aside class="h-fit rounded-xl border border-slate-200 bg-white p-6">
+
+                    <h2 class="mb-5 text-lg font-bold text-slate-900">
+                        Ringkasan Pesanan
+                    </h2>
+
+
+                    <!-- Product List -->
+                    <div
+                        id="checkoutProducts"
+                        class="mb-5 space-y-4"
+                    >
+                        <!-- Produk ditampilkan melalui JavaScript -->
+                    </div>
+
+
+                    <div class="border-t border-slate-200 pt-4">
+
+                        <div class="mb-3 flex justify-between text-sm">
+
+                            <span class="text-slate-500">
+                                Subtotal
+                            </span>
+
+                            <span id="checkoutSubtotal">
+                                Rp0
+                            </span>
+
+                        </div>
+
+
+                        <div class="mb-3 flex justify-between text-sm">
+
+                            <span class="text-slate-500">
+                                Ongkos Kirim
+                            </span>
+
+                            <span id="shippingCost">
+                                Rp0
+                            </span>
+
+                        </div>
+
+
+                        <div class="mb-5 flex justify-between">
+
+                            <span class="font-semibold">
+                                Total Pembayaran
+                            </span>
+
+                            <span
+                                id="checkoutTotal"
+                                class="text-xl font-bold text-slate-900"
+                            >
+                                Rp0
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            id="placeOrderButton"
+                            class="w-full rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                        >
+                            Buat Pesanan
+                        </button>
+
+
+                        <p class="mt-4 text-center text-xs text-slate-500">
+                            Dengan membuat pesanan, kamu menyetujui proses pemesanan.
+                        </p>
+
+                    </div>
+
+                </aside>
+
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white py-6">
+
+        <div class="mx-auto max-w-7xl px-4 text-center text-sm text-slate-500">
+            © 2026 SlateMarket. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- PRODUCT DATA -->
+    <script src="../js/data/products.js"></script>
+
+    <!-- CHECKOUT JAVASCRIPT -->
+    <script src="../js/pages/checkout.js"></script>
+
+</body>
+</html>

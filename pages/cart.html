@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keranjang Belanja | SlateMarket</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+
+            <!-- Logo -->
+            <a href="../index.html" class="text-2xl font-bold text-slate-900">
+                Slate<span class="text-slate-500">Market</span>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="flex items-center gap-5 text-sm font-medium">
+                <a href="../index.html" class="text-slate-600 hover:text-slate-900">
+                    Beranda
+                </a>
+
+                <a href="cart.html" class="text-slate-900">
+                    Keranjang
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="mx-auto min-h-screen max-w-7xl px-4 py-8">
+
+        <!-- Breadcrumb -->
+        <nav class="mb-6 text-sm text-slate-500">
+            <a href="../index.html" class="hover:text-slate-900">
+                Beranda
+            </a>
+
+            <span class="mx-2">/</span>
+
+            <span class="font-medium text-slate-900">
+                Keranjang Belanja
+            </span>
+        </nav>
+
+
+        <!-- Page Title -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-slate-900">
+                Keranjang Belanja
+            </h1>
+
+            <p class="mt-2 text-slate-500">
+                Periksa kembali produk yang ingin kamu beli.
+            </p>
+        </div>
+
+
+        <!-- CART CONTENT -->
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+
+            <!-- CART ITEMS -->
+            <section class="lg:col-span-2">
+
+                <!-- Select All -->
+                <div class="mb-4 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+
+                    <label class="flex cursor-pointer items-center gap-3">
+                        <input
+                            type="checkbox"
+                            id="selectAll"
+                            class="h-4 w-4 accent-slate-900"
+                        >
+
+                        <span class="text-sm font-medium">
+                            Pilih semua produk
+                        </span>
+                    </label>
+
+                    <span
+                        id="cartItemCount"
+                        class="text-sm text-slate-500"
+                    >
+                        0 produk
+                    </span>
+
+                </div>
+
+
+                <!-- Product List -->
+                <div
+                    id="cartItems"
+                    class="space-y-4"
+                >
+                    <!-- Produk akan ditampilkan oleh JavaScript -->
+                </div>
+
+            </section>
+
+
+            <!-- SUMMARY -->
+            <aside class="h-fit rounded-xl border border-slate-200 bg-white p-6">
+
+                <h2 class="mb-5 text-lg font-bold text-slate-900">
+                    Ringkasan Belanja
+                </h2>
+
+                <!-- Selected Items -->
+                <div class="mb-4 flex justify-between text-sm">
+                    <span class="text-slate-500">
+                        Produk dipilih
+                    </span>
+
+                    <span
+                        id="selectedItemCount"
+                        class="font-medium"
+                    >
+                        0 produk
+                    </span>
+                </div>
+
+
+                <!-- Subtotal -->
+                <div class="mb-4 flex justify-between text-sm">
+                    <span class="text-slate-500">
+                        Subtotal
+                    </span>
+
+                    <span
+                        id="subtotal"
+                        class="font-medium"
+                    >
+                        Rp0
+                    </span>
+                </div>
+
+
+                <!-- Divider -->
+                <div class="my-5 border-t border-slate-200"></div>
+
+
+                <!-- Total -->
+                <div class="mb-6 flex justify-between">
+                    <span class="font-semibold">
+                        Total
+                    </span>
+
+                    <span
+                        id="total"
+                        class="text-xl font-bold text-slate-900"
+                    >
+                        Rp0
+                    </span>
+                </div>
+
+
+                <!-- Checkout Button -->
+                <button
+                    id="checkoutButton"
+                    class="w-full rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                >
+                    Lanjut ke Checkout
+                </button>
+
+
+                <!-- Continue Shopping -->
+                <a
+                    href="../index.html"
+                    class="mt-4 block text-center text-sm font-medium text-slate-600 hover:text-slate-900"
+                >
+                    ← Lanjut Belanja
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white py-6">
+        <div class="mx-auto max-w-7xl px-4 text-center text-sm text-slate-500">
+            © 2026 SlateMarket. All rights reserved.
+        </div>
+    </footer>
+
+
+    <!-- Data Produk -->
+    <script src="../js/data/products.js"></script>
+
+    <!-- Cart JavaScript -->
+    <script src="../js/pages/cart.js"></script>
+
+</body>
+</html>

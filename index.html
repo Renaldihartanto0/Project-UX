@@ -1,13 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>
-        renaldi poke
-    </p>
-</body>
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SlateMarket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <div class="bg-slate-900 text-white text-center text-xs p-2">
+      Temukan produk pilihanmu di SlateMarket
+    </div>
+    <header class="sticky top-0 z-30 border-b bg-white/95 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center gap-4 p-4">
+        <a href="index.html" class="text-xl font-black text-slate-900"
+          >Slate<span class="text-slate-500">Market</span>.</a
+        >
+        <form id="search-form" class="hidden flex-1 md:flex">
+          <input
+            id="search-input"
+            aria-label="Cari produk"
+            placeholder="Cari produk, brand, atau kategori..."
+            class="w-full rounded-l-xl border bg-slate-50 px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-300"
+          /><button
+            class="rounded-r-xl bg-slate-900 px-5 text-sm font-bold text-white"
+          >
+            Cari
+          </button>
+        </form>
+        <nav class="ml-auto flex items-center gap-3">
+            <!-- ACCOUNT NAVIGATION -->
+            <div id="account-nav" class="hidden items-center gap-3 md:flex">
+                <a
+                    href="pages/login.html"
+                    class="text-sm font-semibold hover:text-slate-500"
+                >
+                    Masuk
+                </a>
+            </div>
+
+          <a href="#categories" class="hidden text-sm md:block">Kategori</a>
+            <!-- Wishlist -->
+            <a
+                href="pages/wishlist.html"
+                class="hidden text-sm md:block"
+            >
+                ♡ Wishlist
+            </a>
+          <a
+            href="pages/cart.html"
+            class="relative rounded-xl border p-2"
+            aria-label="Keranjang"
+            >🛒<span
+              id="cart-count"
+              class="absolute -right-2 -top-2 rounded-full bg-slate-900 px-1.5 text-xs text-white"
+              >0</span
+            ></a
+          ><button
+            id="menu-button"
+            class="rounded-lg border p-2 md:hidden"
+            aria-label="Buka menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </nav>
+      </div>
+      <form id="mobile-search" class="flex px-4 pb-3 md:hidden">
+        <input
+          id="mobile-input"
+          aria-label="Cari produk"
+          placeholder="Cari produk..."
+          class="w-full rounded-l-lg border bg-slate-50 px-3 py-2 text-sm"
+        /><button class="rounded-r-lg bg-slate-900 px-3 text-white">
+          Cari
+        </button>
+      </form>
+        <div id="mobile-menu" class="hidden border-t p-4 md:hidden">
+
+            <!-- Kategori -->
+            <a href="#categories" class="block py-2">
+                Kategori produk
+            </a>
+
+            <!-- Wishlist -->
+            <a href="pages/wishlist.html" class="block py-2">
+                ♡ Wishlist
+            </a>
+
+            <!-- Login -->
+            <div id="mobile-account">
+                <a href="pages/login.html" class="block py-2">
+                    Masuk / Daftar
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <main class="mx-auto max-w-7xl px-4 py-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="mb-5 text-xs text-slate-500">
+        <ol class="flex gap-2">
+          <li><a href="index.html">Beranda</a></li>
+          <li>/</li>
+          <li aria-current="page" class="font-semibold text-slate-800">
+            Marketplace
+          </li>
+        </ol>
+      </nav>
+      <section
+        class="rounded-3xl bg-slate-900 px-6 py-10 text-white sm:px-10 md:py-14"
+      >
+        <div class="max-w-2xl">
+          <span
+            class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs"
+            >MARKETPLACE PILIHAN</span
+          >
+          <h1 class="mt-5 text-3xl font-black leading-tight sm:text-5xl">
+            Temukan yang kamu cari,
+            <span class="text-slate-300">lebih mudah.</span>
+          </h1>
+          <p
+            class="mt-4 max-w-xl text-sm leading-6 text-slate-300 sm:text-base"
+          >
+            Jelajahi berbagai kategori dan produk dari banyak penjual dalam satu
+            tempat.
+          </p>
+          <a
+            href="#products"
+            class="mt-6 inline-block rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-900 hover:bg-slate-200"
+            >Mulai belanja →</a
+          >
+        </div>
+      </section>
+      <section class="my-6 grid gap-3 sm:grid-cols-3">
+        <div class="rounded-2xl border bg-white p-4">
+          <b>🛡️ Belanja nyaman</b>
+          <p class="mt-1 text-xs text-slate-500">Pengalaman belanja terarah</p>
+        </div>
+        <div class="rounded-2xl border bg-white p-4">
+          <b>🚚 Pilihan pengiriman</b>
+          <p class="mt-1 text-xs text-slate-500">Sesuaikan kebutuhanmu</p>
+        </div>
+        <div class="rounded-2xl border bg-white p-4">
+          <b>💬 Bantuan pelanggan</b>
+          <p class="mt-1 text-xs text-slate-500">Dukungan saat dibutuhkan</p>
+        </div>
+      </section>
+      <section id="categories" class="py-5">
+        <div class="mb-4">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500">
+            Jelajahi
+          </p>
+          <h2 class="text-2xl font-extrabold">Kategori populer</h2>
+        </div>
+        <div
+          id="category-list"
+          class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
+        ></div>
+      </section>
+      <section id="products" class="py-6">
+        <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p
+              class="text-xs font-bold uppercase tracking-widest text-slate-500"
+            >
+              Rekomendasi
+            </p>
+            <h2 class="text-2xl font-extrabold">Produk pilihan</h2>
+          </div>
+          <label class="text-sm"
+            >Urutkan
+            <select id="sort" class="rounded-lg border bg-white p-2">
+              <option value="recommended">Rekomendasi</option>
+              <option value="low">Harga terendah</option>
+              <option value="high">Harga tertinggi</option>
+            </select></label
+          >
+        </div>
+        <p id="filter-label" class="mb-3 text-sm text-slate-500"></p>
+        <div
+          id="product-grid"
+          class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5"
+        ></div>
+        <div
+          id="empty"
+          class="hidden rounded-xl border border-dashed bg-white p-8 text-center"
+        >
+          Produk tidak ditemukan.
+          <button id="reset" class="font-bold underline">
+            Reset pencarian
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-10 border-t bg-white">
+      <div
+        class="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:grid-cols-3 lg:px-8"
+      >
+        <div>
+          <b class="text-xl">SlateMarket.</b>
+          <p class="mt-2 text-sm text-slate-500">
+            Marketplace untuk menemukan berbagai produk dari banyak penjual.
+          </p>
+        </div>
+        <div>
+          <b>Jelajahi</b>
+          <p class="mt-2 text-sm text-slate-500">
+            <a href="#categories">Kategori</a> ·
+            <a href="#products">Produk</a> ·
+            <a href="pages/cart.html">Keranjang</a>
+          </p>
+        </div>
+        <div>
+          <b>Bantuan</b>
+          <p class="mt-2 text-sm text-slate-500">
+            Pusat bantuan · Cara berbelanja · Hubungi kami
+          </p>
+        </div>
+      </div>
+      <div class="border-t p-4 text-center text-xs text-slate-500">
+        © 2026 SlateMarket · Prototype pembelajaran
+      </div>
+    </footer>
+    <div
+      id="toast"
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-5 left-1/2 z-50 -translate-x-1/2 rounded-xl bg-slate-900 px-4 py-3 text-sm text-white opacity-0 transition-opacity"
+    ></div>
+    <script src="js/data/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar-auth.js"></script>
+  </body>
 </html>

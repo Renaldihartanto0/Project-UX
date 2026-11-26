@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detail Produk | SlateMarket</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white">
+
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+
+            <a href="../index.html" class="text-2xl font-bold text-slate-900">
+                Slate<span class="text-slate-500">Market</span>
+            </a>
+
+            <nav class="flex items-center gap-5 text-sm font-medium">
+
+                <a
+                    href="../index.html"
+                    class="text-slate-600 hover:text-slate-900"
+                >
+                    Beranda
+                </a>
+
+                <a
+                    href="cart.html"
+                    class="text-slate-600 hover:text-slate-900"
+                >
+                    Keranjang
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main class="mx-auto min-h-screen max-w-7xl px-4 py-8">
+
+        <!-- BREADCRUMB -->
+        <nav class="mb-6 text-sm text-slate-500">
+
+            <a href="../index.html" class="hover:text-slate-900">
+                Beranda
+            </a>
+
+            <span class="mx-2">/</span>
+
+            <span id="breadcrumbCategory">
+                Produk
+            </span>
+
+            <span class="mx-2">/</span>
+
+            <span id="breadcrumbName" class="font-medium text-slate-900">
+                Detail Produk
+            </span>
+
+        </nav>
+
+
+
+        <!-- PRODUCT DETAIL -->
+        <section
+            id="productDetail"
+            class="rounded-xl border border-slate-200 bg-white p-5 md:p-8"
+        >
+
+            <!-- Konten produk akan ditampilkan melalui JavaScript -->
+
+        </section>
+
+
+
+        <!-- PRODUCT DESCRIPTION -->
+        <section class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+
+            <h2 class="mb-5 border-b border-slate-200 pb-4 text-xl font-bold text-slate-900">
+                Deskripsi Produk
+            </h2>
+
+            <p
+                id="productDescription"
+                class="leading-7 text-slate-600"
+            >
+                Deskripsi produk akan ditampilkan di sini.
+            </p>
+
+        </section>
+
+
+
+        <!-- PRODUCT INFORMATION -->
+        <section class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+
+            <h2 class="mb-5 border-b border-slate-200 pb-4 text-xl font-bold text-slate-900">
+                Informasi Produk
+            </h2>
+
+            <div class="grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
+
+                <div class="flex justify-between border-b border-slate-100 pb-3">
+
+                    <span class="text-slate-500">
+                        Kategori
+                    </span>
+
+                    <span id="infoCategory" class="font-medium">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="flex justify-between border-b border-slate-100 pb-3">
+
+                    <span class="text-slate-500">
+                        Rating
+                    </span>
+
+                    <span id="infoRating" class="font-medium">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="flex justify-between border-b border-slate-100 pb-3">
+
+                    <span class="text-slate-500">
+                        Terjual
+                    </span>
+
+                    <span id="infoSold" class="font-medium">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="flex justify-between border-b border-slate-100 pb-3">
+
+                    <span class="text-slate-500">
+                        Penjual
+                    </span>
+
+                    <span id="infoSeller" class="font-medium">
+                        -
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BACK TO HOME -->
+        <div class="mt-8 text-center">
+
+            <a
+                href="../index.html"
+                class="inline-block rounded-lg border border-slate-300 px-6 py-3 font-medium text-slate-700 transition hover:bg-slate-100"
+            >
+                ← Kembali Belanja
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white py-6">
+
+        <div class="mx-auto max-w-7xl px-4 text-center text-sm text-slate-500">
+            © 2026 SlateMarket. All rights reserved.
+        </div>
+
+    </footer>
+
+
+
+    <!-- PRODUCT DATA -->
+    <script src="../js/data/products.js"></script>
+
+    <!-- PRODUCT DETAIL JAVASCRIPT -->
+    <script src="../js/pages/product-detail.js"></script>
+
+</body>
+</html>
