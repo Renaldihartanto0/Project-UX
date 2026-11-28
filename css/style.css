@@ -38,3 +38,29 @@ a {
 .animate-slideshow {
   animation: slideshow 15s ease-in-out infinite;
 }
+@keyframes slideshow {
+  /* Gambar 1 tampil selama ~4.5 detik */
+  0%, 30% {
+    transform: translateX(0%);
+  }
+  /* Geser ke Gambar 2, tampil selama ~4.5 detik */
+  33.33%, 63.33% {
+    transform: translateX(-25%);
+  }
+  /* Geser ke Gambar 3, tampil selama ~4.5 detik */
+  66.66%, 96.66% {
+    transform: translateX(-50%);
+  }
+  /* Geser ke Duplikat Gambar 1 di detik ke-15 */
+  99.99% {
+    transform: translateX(-75%);
+  }
+  /* Lompat instan kembali ke Gambar 1 asli (0%) tanpa jeda */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-slideshow {
+  animation: slideshow 15s ease-in-out infinite;
+}
