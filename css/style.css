@@ -18,3 +18,23 @@ a {
     transition: none !important;
   }
 }
+
+
+@keyframes slideshow {
+  0%, 30% {
+    transform: translateX(0%); /* Tampil Gambar 1 */
+  }
+  33.33%, 63.33% {
+    transform: translateX(-33.333%); /* Geser ke Gambar 2 */
+  }
+  66.66%, 94.66% {
+    transform: translateX(-66.666%); /* Geser ke Gambar 3 */
+  }
+  100% {
+    transform: translateX(0%); /* Kembali ke Gambar 1 */
+  }
+}
+
+.animate-slideshow {
+  animation: slideshow 15s ease-in-out infinite;
+}
